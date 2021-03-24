@@ -98,7 +98,7 @@ contract NFTA is ERC721 {
     function claimAuction(uint itemId) public payable returns (bool success){
         require(block.timestamp >= thisAuction.expirationDate + 2 days);
         require(auctions[itemId].winner == msg.sender);
-     
+        transfer(itemId, msg.sender);
     }
 
     struct Fight{
