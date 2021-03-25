@@ -74,7 +74,7 @@ contract NFTA is ERC721 {
         animalDna = animals[animalId].dna();
         uint newDna = ( animals[animalId].dna()+ animals[targetId].dna()) / 2;
         uint256 newItemId = _tokenIds.current();
-        animals[newId] = token;
+        animals[newitemId] = token;
         _mint(msg.sender, newItemId);
         animals[newItemId] = Animal(name,newDna,family,color);
         _tokenIds.increment();
